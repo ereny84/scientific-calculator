@@ -1,1 +1,2 @@
 sympy>=1.10
+# Required for symbolic mathematics calculations

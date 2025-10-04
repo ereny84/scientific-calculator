@@ -461,7 +461,7 @@ while operator != '0':
 
             equation = sympy.sympify(equation_input)
             solution = sympy.solve(equation, x)
-            print_result(solution)
+            print(f"Solutions: {solution}\n")
             log_operation("Equation Solver", f"equation = {equation_input}", solution)
 
         except Exception as e:

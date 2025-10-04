@@ -475,7 +475,7 @@ while operator != '0':
 
             f = sympy.sympify(equation_input)
             deriv = sympy.diff(f, x)
-            result = deriv.subs(x, pointx0).evalf()  # type: ignore
+            result = float(deriv.subs(x, pointx0).evalf())  # Convert to float
             print_result(result)
             log_operation("Derivative", f"equation = {equation_input}, point = {pointx0}", result)
 
@@ -494,14 +494,14 @@ while operator != '0':
             if choice.lower() == 'y':
                 a = float(input("Enter lower limit: "))
                 b = float(input("Enter upper limit: "))
-                result = sympy.integrate(f, (x, a, b)).evalf()
+                result = float(sympy.integrate(f, (x, a, b)).evalf())
                 print_result(result)
-                log_operation("Integration", f"lower_limit = {a}, upper_limit = {b}, equation{f}", result)
+                log_operation("Integration", f"lower_limit = {a}, upper_limit = {b}, equation = {f}", result)
 
             elif choice.lower() == 'n':
                 result = sympy.integrate(f, x)
-                print(result)
-                log_operation("Integration", f"equation = {f}", result)
+                print(f"Indefinite integral: {result}\n")
+                log_operation("Integration", f"equation = {f}", str(result))
 
             else:
                 print("\nUndefined operation..\n")
@@ -618,7 +618,7 @@ while operator != '0':
 
                 else:
                     matrix_sym = sympy.Matrix(matrix)
-                    det = matrix_sym.det()
+                    det = float(matrix_sym.det())
                     print_result(det)
                     log_operation("Determinant", f"size = {size}, matrix = {matrix}", det)
 

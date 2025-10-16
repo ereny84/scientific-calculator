@@ -41,7 +41,7 @@ A comprehensive scientific calculator built with Python that supports advanced m
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/scientific-calculator.git
+git clone https://github.com/ereny84/scientific-calculator.git
 cd scientific-calculator
 ```
 
@@ -106,4 +106,4 @@ Feel free to fork this project and submit pull requests for improvements!
 This project is open source and available under the MIT License.
 
 ---
-*Created by Eren - Scientific Calculator Project*
+*Created by Eren Yildirim - Scientific Calculator Project*
